@@ -1,0 +1,15 @@
+---
+title: Components
+layout: default
+---
+<h1>Pages</h1>
+
+<ul>
+    {%- for post in collections.all -%}
+      <li{% if page.url == post.url %} aria-current="page"{% endif %}>
+        <a href="{{post.url}}">{{ post.data.title }}</a>
+    </li>
+    {%- endfor -%}
+</ul>
+
+<img src="{{ "/assets/images/cms/placeholder.svg" | htmlBaseUrl }}" alt="">
